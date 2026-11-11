@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Birthday Verification ❤️</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Poppins:wght@300;400;500;600&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body class="dob-page">
+
+    <!-- Background -->
+
+    <div class="background">
+
+        <div class="stars"></div>
+
+        <div class="moon"></div>
+
+        <div class="overlay"></div>
+
+    </div>
+
+    <!-- Floating Hearts -->
+
+    <div class="hearts">
+
+        <span>❤</span>
+        <span>❤</span>
+        <span>❤</span>
+        <span>❤</span>
+        <span>❤</span>
+        <span>❤</span>
+
+    </div>
+
+    <!-- Verification Card -->
+
+    <section class="hero">
+
+        <div class="glass verify-card">
+
+            <h3>Unlock Your Surprise ❤️</h3>
+
+            <p class="subtitle">
+
+                Before opening your birthday surprise,<br>
+
+                please enter your Date of Birth.
+
+            </p>
+
+            <div class="dob-box">
+
+                <input type="number" id="day" placeholder="Day" min="1" max="31">
+
+                <select id="month" required>
+
+                    <option value="" selected disabled>Month</option>
+
+                    <option value="January">January</option>
+                    <option value="February">February</option>
+                    <option value="March">March</option>
+                    <option value="April">April</option>
+                    <option value="May">May</option>
+                    <option value="June">June</option>
+                    <option value="July">July</option>
+                    <option value="August">August</option>
+                    <option value="September">September</option>
+                    <option value="October">October</option>
+                    <option value="November">November</option>
+                    <option value="December">December</option>
+
+                </select>
+
+            </div>
+
+            <button id="verifyBtn">
+                🎁 Open Your Birthday Surprise ❤️
+            </button>
+
+            <p id="message"></p>
+
+        </div>
+
+    </section>
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>

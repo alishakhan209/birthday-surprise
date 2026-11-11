@@ -1,0 +1,1843 @@
+/* ===========================
+   Google Font
+=========================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+
+    font-family: 'Poppins', sans-serif;
+    overflow-x: hidden;
+    overflow-y: auto;
+    background: #000;
+    color: #fff;
+
+}
+
+/* ===========================
+   Loading Screen
+=========================== */
+
+#loader {
+
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+
+    background: #000;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+    z-index: 99999;
+
+}
+
+.loader-heart {
+
+    font-size: 80px;
+
+    animation: heartBeat 1s infinite;
+
+}
+
+#loader h2 {
+
+    margin-top: 20px;
+
+    font-weight: 300;
+
+    letter-spacing: 2px;
+
+}
+
+@keyframes heartBeat {
+
+    0% {
+
+        transform: scale(1);
+
+    }
+
+    50% {
+
+        transform: scale(1.2);
+
+    }
+
+    100% {
+
+        transform: scale(1);
+
+    }
+
+}
+
+/* ===========================
+ Background
+=========================== */
+
+.background {
+
+    position: fixed;
+
+    top: 0;
+
+    left: 0;
+
+    width: 100%;
+
+    height: 100vh;
+
+    background:
+
+        linear-gradient(180deg,
+
+            #000000,
+
+            #080808,
+
+            #111111,
+
+            #1b1b1b);
+
+    overflow: hidden;
+
+    z-index: -10;
+
+}
+
+.overlay {
+
+    position: absolute;
+
+    width: 100%;
+
+    height: 100%;
+
+    background: rgba(0, 0, 0, .25);
+
+}
+
+/* ===========================
+ Moon
+=========================== */
+
+.moon {
+
+    position: absolute;
+
+    top: 60px;
+
+    right: 90px;
+
+    width: 130px;
+
+    height: 130px;
+
+    border-radius: 50%;
+
+    background: #fff;
+
+    box-shadow:
+        0 0 25px #ffffff,
+        0 0 70px #ffd700,
+        0 0 120px rgba(255, 215, 0, .5);
+
+}
+
+/* ===========================
+ Stars
+=========================== */
+
+.stars {
+
+    position: absolute;
+
+    width: 100%;
+
+    height: 100%;
+
+    background-image:
+
+        radial-gradient(#fff 1px, transparent 1px);
+
+    background-size: 50px 50px;
+
+    opacity: .45;
+
+    animation: starsMove 80s linear infinite;
+
+}
+
+@keyframes starsMove {
+
+    from {
+
+        transform: translateY(0);
+
+    }
+
+    to {
+
+        transform: translateY(-500px);
+
+    }
+
+}
+
+/* ===========================
+ Hero Section
+=========================== */
+
+.hero {
+
+    min-height: 100vh;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    padding: 20px;
+
+}
+
+/* ===========================
+ Glass Card
+=========================== */
+
+.glass {
+
+    width: 700px;
+
+    max-width: 95%;
+
+    padding: 60px;
+
+    text-align: center;
+
+    border-radius: 30px;
+
+    background: rgba(255, 255, 255, .10);
+
+    backdrop-filter: blur(20px);
+
+    border: 1px solid rgba(255, 255, 255, .15);
+
+    box-shadow:
+
+        0 0 30px rgba(255, 215, 0, .15),
+
+        0 0 60px rgba(255, 0, 100, .08);
+
+    animation: fadeUp 2s;
+
+}
+
+@keyframes fadeUp {
+
+    from {
+
+        opacity: 0;
+
+        transform: translateY(60px);
+
+    }
+
+    to {
+
+        opacity: 1;
+
+        transform: translateY(0);
+
+    }
+
+}
+
+.glass h3 {
+
+    font-family: 'Great Vibes', cursive;
+
+    font-size: 55px;
+
+    color: gold;
+
+    margin-bottom: 15px;
+
+}
+
+.glass h1 {
+
+    font-size: 48px;
+
+    margin-bottom: 25px;
+
+}
+
+.glass p {
+
+    font-size: 20px;
+
+    line-height: 1.8;
+
+    color: #ddd;
+
+    margin-bottom: 15px;
+
+}
+
+/* ===========================
+   Start Button
+=========================== */
+
+#startBtn {
+
+    margin-top: 30px;
+
+    padding: 18px 45px;
+
+    border: none;
+
+    border-radius: 50px;
+
+    background: linear-gradient(45deg, #ff004c, #ff8c00);
+
+    color: #fff;
+
+    font-size: 18px;
+
+    font-weight: 600;
+
+    cursor: pointer;
+
+    transition: .4s ease;
+
+    box-shadow: 0 0 25px rgba(255, 0, 100, .4);
+
+}
+
+#startBtn:hover {
+
+    transform: translateY(-5px) scale(1.05);
+
+    box-shadow:
+        0 0 30px gold,
+        0 0 60px #ff0066;
+
+}
+
+/* ===========================
+   Floating Hearts
+=========================== */
+
+.hearts {
+
+    position: fixed;
+
+    width: 100%;
+
+    height: 100%;
+
+    left: 0;
+
+    top: 0;
+
+    pointer-events: none;
+
+    overflow-x: hidden;
+    overflow-y: hidden;
+}
+
+.hearts span {
+
+    position: absolute;
+
+    bottom: -100px;
+
+    color: #ff3366;
+
+    font-size: 22px;
+
+    animation: heartFloat 14s linear infinite;
+
+}
+
+.hearts span:nth-child(1) {
+    left: 5%;
+    animation-delay: 0s;
+}
+
+.hearts span:nth-child(2) {
+    left: 15%;
+    animation-delay: 2s;
+}
+
+.hearts span:nth-child(3) {
+    left: 28%;
+    animation-delay: 5s;
+}
+
+.hearts span:nth-child(4) {
+    left: 40%;
+    animation-delay: 8s;
+}
+
+.hearts span:nth-child(5) {
+    left: 58%;
+    animation-delay: 1s;
+}
+
+.hearts span:nth-child(6) {
+    left: 72%;
+    animation-delay: 4s;
+}
+
+.hearts span:nth-child(7) {
+    left: 84%;
+    animation-delay: 7s;
+}
+
+.hearts span:nth-child(8) {
+    left: 95%;
+    animation-delay: 10s;
+}
+
+@keyframes heartFloat {
+
+    0% {
+
+        transform: translateY(0) scale(.8);
+
+        opacity: 0;
+
+    }
+
+    20% {
+
+        opacity: 1;
+
+    }
+
+    100% {
+
+        transform: translateY(-120vh) scale(1.8);
+
+        opacity: 0;
+
+    }
+
+}
+
+/* ===========================
+   Rose Petals
+=========================== */
+
+.petals {
+
+    position: fixed;
+
+    width: 100%;
+
+    height: 100%;
+
+    top: 0;
+
+    left: 0;
+
+    pointer-events: none;
+
+}
+
+.petals span {
+
+    position: absolute;
+
+    top: -100px;
+
+    font-size: 25px;
+
+    animation: petalFall 15s linear infinite;
+
+}
+
+.petals span:nth-child(1) {
+    left: 8%;
+    animation-delay: 0s;
+}
+
+.petals span:nth-child(2) {
+    left: 25%;
+    animation-delay: 4s;
+}
+
+.petals span:nth-child(3) {
+    left: 45%;
+    animation-delay: 8s;
+}
+
+.petals span:nth-child(4) {
+    left: 70%;
+    animation-delay: 2s;
+}
+
+.petals span:nth-child(5) {
+    left: 90%;
+    animation-delay: 6s;
+}
+
+@keyframes petalFall {
+
+    0% {
+
+        transform: translateY(-100px) rotate(0deg);
+
+        opacity: 0;
+
+    }
+
+    20% {
+
+        opacity: 1;
+
+    }
+
+    100% {
+
+        transform: translateY(120vh) rotate(360deg);
+
+        opacity: 0;
+
+    }
+
+}
+
+/* ===========================
+ Responsive
+=========================== */
+
+@media(max-width:768px) {
+
+    .glass {
+
+        padding: 35px 25px;
+
+    }
+
+    .glass h3 {
+
+        font-size: 40px;
+
+    }
+
+    .glass h1 {
+
+        font-size: 30px;
+
+    }
+
+    .glass p {
+
+        font-size: 16px;
+
+    }
+
+    #startBtn {
+
+        width: 100%;
+
+        padding: 16px;
+
+        font-size: 16px;
+
+    }
+
+    .moon {
+
+        width: 80px;
+
+        height: 80px;
+
+        top: 30px;
+
+        right: 25px;
+
+    }
+
+}
+
+
+/* ==============================
+DOB PAGE
+============================== */
+
+.verify-card {
+
+    max-width: 650px;
+
+}
+
+.subtitle {
+
+    margin-bottom: 30px;
+
+    color: #ddd;
+
+    font-size: 18px;
+
+}
+
+.dob-box {
+
+    display: flex;
+
+    justify-content: center;
+
+    gap: 20px;
+
+    margin-bottom: 30px;
+
+    flex-wrap: wrap;
+
+}
+
+.dob-box input,
+.dob-box select {
+
+    width: 180px;
+
+    padding: 15px;
+
+    border: none;
+
+    border-radius: 15px;
+
+    background: rgba(255, 255, 255, .15);
+
+    color: white;
+
+    font-size: 18px;
+
+    text-align: center;
+
+    outline: none;
+
+}
+
+.dob-box option {
+
+    color: black;
+
+}
+
+#message {
+
+    margin-top: 25px;
+
+    font-size: 18px;
+
+    color: gold;
+
+    min-height: 30px;
+
+}
+
+/* Verify Button Disabled */
+
+#verifyBtn:disabled {
+
+    opacity: .7;
+
+    cursor: not-allowed;
+
+}
+/* ===========================
+Verify Button
+=========================== */
+
+#verifyBtn{
+
+    width:100%;
+
+    max-width:320px;
+
+    padding:18px 30px;
+
+    border:none;
+
+    border-radius:50px;
+
+    background:linear-gradient(135deg,#ff4b8b,#ff8c42);
+
+    color:#fff;
+
+    font-size:18px;
+
+    font-weight:600;
+
+    cursor:pointer;
+
+    transition:all .4s ease;
+
+    box-shadow:0 10px 30px rgba(255,75,139,.4);
+
+    letter-spacing:1px;
+
+    margin-top:15px;
+
+    position:relative;
+
+    overflow:hidden;
+
+}
+
+
+/* Shine Effect */
+
+#verifyBtn::before{
+
+    content:"";
+
+    position:absolute;
+
+    top:0;
+
+    left:-100%;
+
+    width:100%;
+
+    height:100%;
+
+    background:linear-gradient(
+        120deg,
+        transparent,
+        rgba(255,255,255,.5),
+        transparent
+    );
+
+    transition:.7s;
+
+}
+
+#verifyBtn:hover::before{
+
+    left:100%;
+
+}
+
+
+/* Hover */
+
+#verifyBtn:hover{
+
+    transform:translateY(-5px);
+
+    box-shadow:
+        0 0 20px #ff4b8b,
+        0 0 40px #ff8c42;
+
+}
+
+
+/* Click */
+
+#verifyBtn:active{
+
+    transform:scale(.96);
+
+}
+
+
+/* Mobile */
+
+@media(max-width:768px){
+
+#verifyBtn{
+
+    width:100%;
+
+    font-size:16px;
+
+    padding:16px;
+
+}
+
+}
+
+/* Message Animation */
+
+#message {
+
+    animation: fadeText .5s ease;
+
+}
+
+@keyframes fadeText {
+
+    from {
+
+        opacity: 0;
+        transform: translateY(10px);
+
+    }
+
+    to {
+
+        opacity: 1;
+        transform: translateY(0);
+
+    }
+
+}
+
+/* ==========================
+Story Page
+========================== */
+.story-section{
+
+min-height:100vh;
+
+display:flex;
+
+justify-content:center;
+
+align-items:center;
+
+padding:100px 20px 40px;
+
+box-sizing:border-box;
+
+}
+
+.story-card{
+
+max-width:850px;
+
+width:100%;
+
+text-align:center;
+
+padding:30px;
+
+}
+
+.story-card h3 {
+
+    font-family: 'Great Vibes', cursive;
+
+    font-size: 60px;
+
+    color: gold;
+
+    margin-bottom: 20px;
+
+}
+
+.story-card h2 {
+
+    font-size: 32px;
+
+    margin-bottom: 15px;
+
+}
+
+.story-card h1 {
+
+    font-size: 48px;
+
+    margin-bottom: 30px;
+
+    color: white;
+
+}
+
+.story-card p {
+
+    font-size: 20px;
+
+    line-height: 2;
+
+    margin-bottom: 25px;
+
+    color: #eeeeee;
+
+}
+
+.story-image {
+
+    margin: 35px 0;
+
+}
+
+.story-image img {
+
+    width: 260px;
+
+    height: 260px;
+
+    border-radius: 25px;
+
+    object-fit: cover;
+
+    border: 4px solid gold;
+
+    box-shadow:
+
+        0 0 25px gold;
+
+    transition: .5s;
+
+}
+
+.story-image img:hover {
+
+    transform: scale(1.05);
+
+}
+
+/* ===========================
+Music Button
+=========================== */
+
+#musicBtn {
+
+    position: fixed;
+
+    top: 30px;
+
+    left: 30px;
+
+    width: 60px;
+
+    height: 60px;
+
+    border-radius: 50%;
+
+    border: none;
+
+    background: rgba(255, 255, 255, .15);
+
+    color: white;
+
+    font-size: 25px;
+
+    cursor: pointer;
+
+    backdrop-filter: blur(15px);
+
+    transition: .4s;
+
+    z-index: 999;
+
+}
+
+#musicBtn:hover {
+
+    transform: scale(1.1);
+
+    background: gold;
+
+    color: black;
+
+}
+
+/* ===========================
+Love Button
+=========================== */
+
+.loveBtn {
+
+    padding: 18px 45px;
+
+    font-size: 18px;
+
+    border: none;
+
+    border-radius: 50px;
+
+    background: linear-gradient(45deg, #ff0055, #ff9800);
+
+    color: white;
+
+    cursor: pointer;
+
+    transition: .5s;
+
+    box-shadow: 0 0 30px rgba(255, 0, 100, .3);
+
+}
+
+.loveBtn:hover {
+
+    transform: translateY(-6px);
+
+    box-shadow:
+
+        0 0 25px gold,
+
+        0 0 50px deeppink;
+
+}
+
+#typingText {
+
+    margin-top: 20px;
+
+    font-size: 20px;
+
+    line-height: 2;
+
+    color: gold;
+
+    min-height: 90px;
+
+}
+
+/* ==========================================
+   GALLERY PAGE
+========================================== */
+
+.gallery-section {
+
+    min-height: 100vh;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    padding: 60px 20px;
+
+}
+
+.gallery-card {
+
+    width: 1200px;
+
+    max-width: 95%;
+
+    text-align: center;
+
+}
+
+.gallery-card h3 {
+
+    font-family: 'Great Vibes', cursive;
+
+    font-size: 65px;
+
+    color: gold;
+
+    margin-bottom: 20px;
+
+}
+
+.gallery-card p {
+
+    font-size: 20px;
+
+    color: #eeeeee;
+
+    margin-bottom: 40px;
+
+    line-height: 2;
+
+}
+
+/* ==========================
+Gallery Grid
+========================== */
+
+.gallery-grid {
+
+    display: grid;
+
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+
+    gap: 30px;
+
+    margin-bottom: 40px;
+
+}
+
+/* ==========================
+Photo Card
+========================== */
+
+.photo {
+
+    background: rgba(255, 255, 255, .08);
+
+    border-radius: 20px;
+
+    overflow: hidden;
+
+    backdrop-filter: blur(12px);
+
+    border: 1px solid rgba(255, 255, 255, .15);
+
+    transition: .5s;
+
+    cursor: pointer;
+
+    box-shadow:
+
+        0 0 20px rgba(255, 215, 0, .15);
+
+}
+
+.photo:hover {
+
+    transform: translateY(-10px) scale(1.03);
+
+    box-shadow:
+
+        0 0 25px gold,
+
+        0 0 60px deeppink;
+
+}
+
+/* ==========================
+Image
+========================== */
+
+
+/* Gallery Images - Full Picture Visible */
+
+.photo img {
+    width: 100%;
+    height: 100%;
+    aspect-ratio: 3 / 4;
+    object-fit: cover;
+    object-position: center;
+    display: block;
+    border-radius: 15px;
+    transition: .5s;
+}
+
+.photo:hover img {
+    transform: scale(1);
+}
+
+/* ==========================
+Caption
+========================== */
+
+.caption {
+
+    padding: 18px;
+
+    font-size: 18px;
+
+    color: white;
+
+    background: rgba(0, 0, 0, .35);
+
+}
+
+/* ==========================
+Responsive
+========================== */
+
+@media(max-width:768px) {
+
+    .gallery-card h3 {
+
+        font-size: 45px;
+
+    }
+
+    .gallery-card p {
+
+        font-size: 17px;
+
+    }
+
+    .photo img {
+
+        height: 220px;
+
+    }
+
+}
+
+
+/* ===========================
+VIDEOS PAGE
+=========================== */
+
+.videos-section {
+
+    min-height: 100vh;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    padding: 60px 20px;
+
+}
+
+.videos-card {
+
+    width: 1200px;
+
+    max-width: 95%;
+
+    text-align: center;
+
+}
+
+.videos-card h3 {
+
+    font-family: 'Great Vibes', cursive;
+
+    font-size: 65px;
+
+    color: gold;
+
+    margin-bottom: 20px;
+
+}
+
+.videos-card p {
+
+    font-size: 20px;
+
+    color: #eee;
+
+    margin-bottom: 40px;
+
+    line-height: 2;
+
+}
+
+/* ==========================
+   VIDEOS PAGE
+========================== */
+
+.video-grid{
+
+    display:grid;
+
+    grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+
+    gap:25px;
+
+    margin-top:30px;
+
+}
+
+.video-card{
+
+    width:100%;
+
+    max-width:450px;
+
+    margin:20px auto;
+
+}
+
+.video-card video{
+
+    width:100%;
+
+    height:550px;
+
+    object-fit:contain;
+
+    background:#000;
+
+    border-radius:20px;
+
+}
+.video-card h4{
+
+    margin-top:15px;
+
+    color:white;
+
+    font-size:20px;
+
+}
+/* =====================================
+   LETTER PAGE
+===================================== */
+
+.letter-section {
+
+    min-height: 100vh;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    padding: 60px 20px;
+
+}
+
+.letter-card {
+
+    width: 900px;
+
+    max-width: 95%;
+
+    text-align: center;
+
+}
+
+.letter-card h3 {
+
+    font-family: 'Great Vibes', cursive;
+
+    font-size: 65px;
+
+    color: gold;
+
+    margin-bottom: 20px;
+
+}
+
+.clickText {
+
+    font-size: 20px;
+
+    color: #eeeeee;
+
+    margin-bottom: 30px;
+
+}
+
+/* =========================
+Envelope
+========================= */
+
+.envelope {
+
+    width: 170px;
+
+    height: 170px;
+
+    margin: auto;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    font-size: 90px;
+
+    cursor: pointer;
+
+    transition: .5s;
+
+    animation: floatEnvelope 2.5s ease-in-out infinite;
+
+}
+
+.envelope:hover {
+
+    transform: scale(1.15);
+
+}
+
+@keyframes floatEnvelope {
+
+    0% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-15px);
+    }
+
+    100% {
+        transform: translateY(0);
+    }
+
+}
+
+/* =========================
+Letter Box
+========================= */
+
+#letterBox {
+
+    display: none;
+
+    margin-top: 40px;
+
+    background: white;
+
+    color: #333;
+
+    border-radius: 20px;
+
+    padding: 40px;
+
+    text-align: left;
+
+    box-shadow: 0 0 35px rgba(255, 215, 0, .4);
+
+}
+
+#letterBox h2 {
+
+    color: #d81b60;
+
+    margin-bottom: 20px;
+
+    font-family: 'Great Vibes', cursive;
+
+    font-size: 42px;
+
+}
+
+#typingLetter {
+
+    font-size: 18px;
+
+    line-height: 2;
+
+    min-height: 240px;
+
+    white-space: pre-line;
+
+}
+
+#nextSurprise {
+
+    margin-top: 35px;
+
+    display: none;
+
+}
+
+/* =========================
+Responsive
+========================= */
+
+@media(max-width:768px) {
+
+    .letter-card h3 {
+
+        font-size: 45px;
+
+    }
+
+    .envelope {
+
+        font-size: 70px;
+
+        width: 120px;
+
+        height: 120px;
+
+    }
+
+    #letterBox {
+
+        padding: 25px;
+
+    }
+
+    #typingLetter {
+
+        font-size: 16px;
+
+    }
+
+}
+
+/* =====================================
+   FINAL SURPRISE PAGE
+===================================== */
+
+
+.final-section{
+
+    min-height:100vh;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    padding:40px 20px;
+
+}
+
+
+.final-card{
+
+    width:900px;
+
+    max-width:95%;
+
+    text-align:center;
+
+    padding:50px;
+
+}
+
+
+
+.final-card h3{
+
+    font-family:'Great Vibes',cursive;
+
+    font-size:70px;
+
+    color:gold;
+
+    margin-bottom:40px;
+
+}
+
+
+
+/* Gift Box */
+
+.gift{
+
+    font-size:120px;
+
+    cursor:pointer;
+
+    display:inline-block;
+
+    animation:giftMove 2s infinite;
+
+    transition:.5s;
+
+}
+
+
+
+.gift:hover{
+
+    transform:scale(1.15) rotate(10deg);
+
+}
+
+
+
+@keyframes giftMove{
+
+
+0%{
+
+transform:translateY(0);
+
+}
+
+
+50%{
+
+transform:translateY(-20px);
+
+}
+
+
+100%{
+
+transform:translateY(0);
+
+}
+
+
+}
+
+
+
+/* Gift Text */
+
+#giftText{
+
+    font-size:22px;
+
+    color:white;
+
+    margin-top:20px;
+
+}
+
+
+
+/* Final Message */
+
+
+#finalMessage{
+
+    display:none;
+
+    animation:showMessage 2s ease;
+
+}
+
+
+
+#finalMessage h1{
+
+    font-family:'Great Vibes',cursive;
+
+    font-size:65px;
+
+    color:gold;
+
+    margin-bottom:25px;
+
+}
+
+
+
+#finalMessage p{
+
+    font-size:22px;
+
+    line-height:2;
+
+    color:#fff;
+
+}
+
+
+
+#finalMessage h2{
+
+    margin-top:40px;
+
+    color:#ffb6c1;
+
+    font-size:35px;
+
+}
+
+
+
+/* Message Animation */
+
+
+@keyframes showMessage{
+
+
+from{
+
+opacity:0;
+
+transform:translateY(50px);
+
+}
+
+
+to{
+
+opacity:1;
+
+transform:translateY(0);
+
+}
+
+
+}
+
+
+
+/* Fireworks */
+
+.firework{
+
+    position:fixed;
+
+    width:8px;
+
+    height:8px;
+
+    border-radius:50%;
+
+    background:gold;
+
+    animation:explode 1s linear forwards;
+
+}
+
+
+
+@keyframes explode{
+
+
+from{
+
+transform:scale(1);
+
+opacity:1;
+
+}
+
+
+to{
+
+transform:scale(15);
+
+opacity:0;
+
+}
+
+
+}
+
+
+
+/* Mobile */
+
+@media(max-width:768px){
+
+
+.final-card h3{
+
+font-size:45px;
+
+}
+
+
+.gift{
+
+font-size:90px;
+
+}
+
+
+#finalMessage h1{
+
+font-size:45px;
+
+}
+
+
+}
+
+/* ==========================
+Story Mobile Responsive
+========================== */
+
+@media screen and (max-width:768px){
+
+.story-section{
+
+padding-top:120px;
+
+padding-bottom:40px;
+
+align-items:flex-start;
+
+}
+
+.story-card{
+
+width:95%;
+
+padding:20px;
+
+}
+
+.story-card h3{
+
+font-size:42px;
+
+margin-bottom:15px;
+
+}
+
+.story-card h2{
+
+font-size:22px;
+
+line-height:1.4;
+
+}
+
+.story-card h1{
+
+font-size:30px;
+
+line-height:1.4;
+
+}
+
+.story-card p{
+
+font-size:16px;
+
+line-height:1.8;
+
+}
+
+.story-image img{
+
+width:200px;
+
+height:200px;
+
+}
+
+}
+/* Next Button */
+
+#nextVideo{
+
+    display:inline-block;
+
+    margin-top:40px;
+
+    position:relative;
+
+    z-index:10;
+
+}
+
+/* ==========================
+   MOBILE RESPONSIVE
+========================== */
+
+@media (max-width:768px){
+
+    .video-grid{
+        grid-template-columns:1fr;
+        gap:20px;
+    }
+
+    .video-card{
+        width:100%;
+        padding:12px;
+    }
+
+    .video-card video{
+        width:100%;
+        max-width:100%;
+        height:420px;
+        object-fit:contain;
+    }
+
+    .video-card h4{
+        font-size:18px;
+    }
+
+}
+
